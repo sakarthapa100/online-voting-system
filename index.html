@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
-        <form action="login.php" method="post">
+        <form action="api/login.php" method="POST">
             <div class="input-group">
                 <label for="mobile">Mobile Number</label>
                 <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
@@ -21,13 +21,13 @@
             <div class="input-group">
                 <label for="role">Role</label>
                 <select id="role" name="role" required>
-                    <option value="voter">Voter</option>
-                    <option value="group">Group</option>
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
                 </select>
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-        <p class="register-link">Don't have an account? <a href="../routes/register.html">Register here</a></p>
+        <p class="register-link">Don't have an account? <a href="routes/register.html">Register here</a></p>
     </div>
 </body>
 </html>

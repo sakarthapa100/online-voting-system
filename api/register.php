@@ -26,7 +26,7 @@ if ($password == $cpassword) {
         exit();
     }
 
-    $insert = mysqli_query($conn, "INSERT INTO user (name, mobile, address, password, photo, role, status, votes) VALUES ('$name', '$mobile', '$address', '$password', '$image', '$role', 0, 0)");
+    $insert = mysqli_query($connect, "INSERT INTO user (name, mobile, address, password, photo, role, status, votes) VALUES ('$name', '$mobile', '$address', '$password', '$image', '$role', 0, 0)");
     
     if ($insert) {
         echo '
@@ -47,7 +47,7 @@ if ($password == $cpassword) {
     echo '
     <script>
         alert("Password and Confirm password do not match!");
-        window.location = "../register.html"; 
+        window.location = "../routes/register.html"; 
     </script>
     ';
 }

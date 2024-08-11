@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,7 @@
 <body>
     <div class="register-container">
         <h1>Register</h1>
-        <form method="POST" action="../api/register.php" >
+        <form method="POST" action="../api/register.php" enctype="multipart/form-data">
             <div class="input-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -34,13 +32,13 @@
             </div>
             <div class="input-group">
                 <label for="image">Upload Image</label>
-                <input type="file" id="image" name="image"  >
+                <input type="file" id="image" name="photo" required>
             </div>
             <div class="input-group">
                 <label for="role">Role</label>
                 <select id="role" name="role" required>
-                    <option value="voter">Voter</option>
-                    <option value="group">Group</option>
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
                 </select>
             </div>
             <button type="submit" class="btn">Register</button>
